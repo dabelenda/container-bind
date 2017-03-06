@@ -1,0 +1,23 @@
+dn: idnsName=example.com,dc=example,dc=com
+objectClass: top
+objectClass: idnsZone
+objectClass: idnsRecord
+idnsName: example.com
+idnsZoneActive: TRUE
+idnsSOAmName: server.example.com
+idnsAllowQuery: any;
+idnsAllowDynUpdate: TRUE
+idnsSOAserial: 1
+idnsSOArefresh: 10800
+idnsSOArName: root.example.com
+idnsSOAretry: 900
+idnsSOAexpire: 604800
+idnsSOAminimum: 86400
+NSRecord: ns
+ARecord: 192.168.55.103
+
+dn: idnsName=ns,idnsName=example.com,dc=example,dc=com
+objectClass: idnsRecord
+objectClass: top
+idnsName: ns
+aRecord: 192.168.99.104
