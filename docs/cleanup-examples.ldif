@@ -1,0 +1,23 @@
+dn: ou=Special Users,dc=saas,dc=epfl,dc=ch
+changetype: delete
+
+dn: ou=People,dc=saas,dc=epfl,dc=ch
+changetype: delete
+
+dn: cn=Directory Administrators,dc=saas,dc=epfl,dc=ch
+changetype: delete
+
+dn: cn=Accounting Managers,ou=Groups,dc=saas,dc=epfl,dc=ch
+changetype: delete
+
+dn: cn=HR Managers,ou=Groups,dc=saas,dc=epfl,dc=ch
+changetype: delete
+
+dn: cn=QA Managers,ou=Groups,dc=saas,dc=epfl,dc=ch
+changetype: delete
+
+dn: cn=PD Managers,ou=Groups,dc=saas,dc=epfl,dc=ch
+changetype: delete
+
+dn: ou=Groups,dc=saas,dc=epfl,dc=ch
+changetype: delete

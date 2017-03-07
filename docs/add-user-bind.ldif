@@ -1,0 +1,5 @@
+dn: cn=bind9user,ou=dns,dc=saas,dc=epfl,dc=ch
+objectclass: simpleSecurityObject
+objectclass: top
+objectclass: organizationalRole
+userPassword: foobarbaz

@@ -1,0 +1,4 @@
+dn: ou=dns,dc=saas,dc=epfl,dc=ch
+changetype: modify
+add: aci
+aci: (target="ldap:///ou=dns,dc=saas,dc=epfl,dc=ch")(targetattr="*")(version 3.0; acl "Allow all modifications in ou=dns,dc=saas,dc=epfl,dc=ch to bind9user"; allow(write, add, delete, read, search) userdn="ldap:///cn=bind9user,ou=dns,dc=saas,dc=epfl,dc=ch";)
