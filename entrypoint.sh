@@ -2,7 +2,7 @@
 
 set -e
 
-if [ ! -f '/etc/my_named.conf' ]; then
+if [ ! -f '/etc/named.conf' ]; then
   find /entrypoint.d -type f | sort -n |
   while read f; do
     case "$f" in

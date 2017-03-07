@@ -10,7 +10,7 @@ if [ ${BIND_CONFIG_LDAP} == "True" ]; then
   : ${BIND_LDAP_BIND_PASSWORD:?"BIND_LDAP_BIND_PASSWORD must be set"}
   : ${BIND_LDAP_URI_SCHEME:="ldap"}
 
-  cat >> /etc/my_named.conf <<-EOF
+  cat >> /etc/named.conf <<-EOF
 		
 		# Configure BIND to get Data from LDAP
 		dynamic-db "ldap-dns" {

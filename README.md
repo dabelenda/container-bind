@@ -16,3 +16,4 @@ To configure the bind server, some environment variables need to be set.
 - *BIND_LDAP_BIND_DN*: The DN bind-dyndb-ldap will use for auth on the LDAP server 
 - *BIND_LDAP_BIND_PASSWORD*: The password bind-dyndb-ldap will use for auth on the LDAP server 
 - *BIND_LDAP_URI_SCHEME*: The scheme bind-dyndb-ldap will use to connect to the ldap server, can be "ldap" or "ldaps"
+- *BIND_KEYS_LIST*: A list of keys to import into bind config, format is a couple "name + secretkey" per line

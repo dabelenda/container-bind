@@ -2,7 +2,7 @@
 
 : ${BIND_RECURSION:="no"}
 
-cat > /etc/my_named.conf <<EOF
+cat > /etc/named.conf <<EOF
 //
 // named.conf
 //
