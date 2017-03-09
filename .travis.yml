@@ -1,0 +1,24 @@
+---
+sudo: required
+
+services:
+  - docker
+
+install:
+  - docker build --no-cache -t dabelenda/bind:${TRAVIS_BRANCH} .;
+    docker tag $(docker images -q dabelenda/bind:${TRAVIS_BRANCH}) dabelenda/bind:latest
+
+script:
+  - echo "for now, no tests"
+
+after_success:
+  - if [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
+      docker login -u="${TRAVIS_SECRET_DOCKER_USERNAME}" -p="${TRAVIS_SECRET_DOCKER_PASSWORD}";
+      if [ "${TRAVIS_BRANCH}" == "master" ]; then
+      $bb
+        docker push dabelenda/bind:latest;
+      else
+        docker push dabelenda/bind:${TRAVIS_BRANCH};
+      fi
+      docker logout;
+    fi
