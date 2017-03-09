@@ -6,4 +6,4 @@ COPY ./entrypoint.sh /
 COPY ./entrypoint.d/ /entrypoint.d
 
 ENTRYPOINT [ "/entrypoint.sh" ]
-CMD [ "named", "-c", "/etc/my_named.conf", "-g" ]
+CMD [ "/usr/sbin/named -c /etc/named.conf -g" ]

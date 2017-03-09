@@ -1,4 +1,4 @@
-dn: cn=bind9user,ou=dns,dc=saas,dc=epfl,dc=ch
+dn: cn=bind9user,ou=dns,dc=example,dc=com
 objectclass: simpleSecurityObject
 objectclass: top
 objectclass: organizationalRole

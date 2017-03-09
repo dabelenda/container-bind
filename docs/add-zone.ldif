@@ -1,20 +1,22 @@
-dn: ou=dns,dc=saas,dc=epfl,dc=ch
-ou: dns
-objectClass: top
-objectclass: organizationalunit
+#dn: ou=dns,dc=example,dc=com
+#ou: dns
+#objectClass: top
+#objectclass: organizationalunit
 
-dn: idnsName=saas.epfl.ch,ou=dns,dc=saas,dc=epfl,dc=ch
+dn: idnsName=example.com,ou=dns,dc=example,dc=com
 objectClass: top
 objectClass: idnsZone
 objectClass: idnsRecord
-idnsName: saas.epfl.ch
+idnsName: example.com
 idnsZoneActive: TRUE
-idnsSOAmName: saas.epfl.ch
+idnsSOAmName: example.com
 idnsAllowQuery: any;
 idnsAllowDynUpdate: TRUE
 idnsSOAserial: 1
 idnsSOArefresh: 10800
+idnsAllowTransfer: key rancher-updates;
 idnsSOArName: caas-admins.groupes.epfl.ch
+idnsUpdatePolicy: grant rancher-updates subdomain example.com;
 idnsSOAretry: 900
 idnsSOAexpire: 604800
 idnsSOAminimum: 86400
@@ -22,7 +24,7 @@ NSRecord: ns
 ARecord: 128.178.210.6
 ARecord: 128.178.210.7
 
-dn: idnsName=ns,idnsName=saas.epfl.ch,ou=dns,dc=saas,dc=epfl,dc=ch
+dn: idnsName=ns,idnsName=example.com,ou=dns,dc=example,dc=com
 objectClass: idnsRecord
 objectClass: top
 idnsName: ns
