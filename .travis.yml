@@ -18,6 +18,6 @@ after_success:
         docker push dabelenda/bind:latest;
       else
         docker push dabelenda/bind:${TRAVIS_BRANCH};
-      fi
+      fi;
       docker logout;
     fi
