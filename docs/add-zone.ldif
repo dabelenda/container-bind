@@ -1,7 +1,7 @@
-#dn: ou=dns,dc=example,dc=com
-#ou: dns
-#objectClass: top
-#objectclass: organizationalunit
+dn: ou=dns,dc=example,dc=com
+ou: dns
+objectClass: top
+objectclass: organizationalunit
 
 dn: idnsName=example.com,ou=dns,dc=example,dc=com
 objectClass: top
